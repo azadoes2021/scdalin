@@ -41,6 +41,26 @@ class CollectdbView(FormView):
         # context ['blog'] = Blog.objects.all()
         
         return context
+    
+
+class CollectdbView002(FormView):
+    # model = Post     
+    template_name = 'collectingdb002.html'
+    form_class = CollectingdbForm
+
+    success_url = 'successori2'    
+    # fields = ['name', 'number', 'subject', 'body', 'terms_confirmed']
+    # success_url = 'success'    
+    
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)       
+        # .objects.all() 로 진행하니 잘 작동되었음.
+        # context ['blog'] = Blog.objects.get(pk=self.kwargs['pk']) => createview에는 pk가 들어가면 에러남.
+        # context ['blog'] = Blog.objects.all()
+        
+        return context
+
 
 
 def successori2(request): 

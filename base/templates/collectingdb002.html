@@ -195,7 +195,7 @@ header .navbar ul li a.active::before, header #menu {
   }
 }
 .btn {
-  background: #518e64;
+  /* background: #518e64; */
 }
 .contact form {
     width: 75%;
@@ -239,12 +239,12 @@ header .navbar ul li a.active::before, header #menu {
         </strong>
         </div>			
         {% endif %}
-  <img id="top" class="landingpic" src="{% static 'images/p001.png' %}" alt="">
-  <img class="landingpic" src="{% static 'images/p002.png' %}" alt="">
-  <img class="landingpic" src="{% static 'images/p003.png' %}" alt="">
-  <img class="landingpic" src="{% static 'images/p004.png' %}" alt="">
-  <!-- <img class="landingpic" src="{% static 'images/005.jpg' %}" alt=""> -->
-  <!-- <img class="landingpic" src="{% static 'images/006.jpg' %}" alt=""> -->
+  <img id="top" class="landingpic" src="{% static 'images/j001.png' %}" alt="">
+  <img class="landingpic" src="{% static 'images/j002.png' %}" alt="">
+  <img class="landingpic" src="{% static 'images/j003.png' %}" alt="">
+  <img class="landingpic" src="{% static 'images/j004.png' %}" alt="">
+  <img class="landingpic" src="{% static 'images/j005.png' %}" alt="">
+  <img class="landingpic" src="{% static 'images/j006.png' %}" alt="">
   <!-- <img class="landingpic" src="{% static 'images/007.jpg' %}" alt=""> -->
   <div id="cont"></div>
 </section> 
@@ -262,7 +262,7 @@ header .navbar ul li a.active::before, header #menu {
         <strong style="color: red;"> 
             <p>신청이 완료되지 않았습니다.</p>
             <!-- <p>***필수사항을 모두 입력하세요***</p> -->
-            <p> 치과명, 성함/상호, 전화번호, 지역란을</p>
+            <p> 회사명, 성함/상호, 전화번호, 지역란을</p>
             <p> 다시 한번 체크해주세요!!</p>
         </strong>
         </div>
@@ -284,8 +284,8 @@ header .navbar ul li a.active::before, header #menu {
             <!-- </div>          -->
             {% elif field.name == 'dhname' %}  
             <!-- <div class="inputBox">             -->
-            <label for="{{ field.id_for_label }}" class="">치과명<span style="color: red;">*</span></label>
-            <input name="{{ field.name }}" type="text" placeholder="치과명" id="{{ field.id_for_label }}">
+            <label for="회사명" class="">회사명<span style="color: red;">*</span></label>
+            <input name="{{ field.name }}" type="text" placeholder="회사명" id="{{ field.id_for_label }}">
             </div>
             {% elif field.name == 'name' %}  
             <div class="inputBox">
