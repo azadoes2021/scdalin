@@ -4,7 +4,11 @@ from django.views.generic.edit import FormView
 
 class HomeView(FormView):
     # model = Post     
-    template_name = 'home.html'
+    # template_name = 'home.html'
+    
+
+
+    template_name = 'collectingdb.html'
     form_class = CollectingdbForm
 
     # success_url = 'success'    
