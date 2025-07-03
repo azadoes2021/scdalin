@@ -8,7 +8,7 @@ class HomeView(FormView):
     
 
 
-    template_name = 'collectingdb.html'
+    template_name = 'collectingdb002.html'
     form_class = CollectingdbForm
 
     # success_url = 'success'    
