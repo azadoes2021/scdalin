@@ -10,7 +10,7 @@
     <meta name="naver-site-verification" content="4d99ee1f5883228a88eba8834a35075a676f261c" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="applicable-device" content="mobile">
-    <title>SOTOPLUS 최고급 공기청정기</title>
+    <title>최고급 공기청정기</title>
     <meta content="공기청정기 | 공기살균기" name="title">
     <meta name="keywords" content="소토플러스, SOTOPLUS, SOTOPLUS 공기청정기, 공기살균기, 공기청정기" />
     <meta name="description" content="SOTOPLUS는 최고 수준의 공기 살균 및 정화 시스템을 설계하고 제조하기 위해 노력하고 있습니다. 함께 건강한 공기를 만들어갑니다." />
@@ -46,7 +46,7 @@
     <meta name="x5-orientation" content="portrait">
     <meta name="full-screen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>Head Phone</title>
+  
 <!-- css -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
@@ -190,28 +190,28 @@ header .navbar ul li a.active::before, header #menu {
     font-size: 1.8rem;
     }
 }
+.btn {
+  background: #518e64;
+}
+.contact form {
+    width: 75%;
+}
 </style>
 <body>
   
-<header>
-  <!-- <a href="{% url 'collectingdb' %}" class="logo"><i class="fas fa-home"></i>SOTO PLUS</a> -->
-  <a href="" class="logo"><i class=""></i>SOTO PLUS</a>
+<!-- <header>
   
+  <a href="" class="logo"><i class=""></i>SOTO PLUS</a>
 
   <div class="ctitle">치과진료실 특화 SOTO UV-PCO 기술</div>        
 
   <div id="menu" class="" ><a class="active" href="#cont">SOTO 구매 신청</a></div>  
   <nav class="navbar">
     <ul>
-      <li><a class="active" href="#cont">SOTO 구매 신청</a></li>
-      <!-- <li><a href="#about">about</a></li>
-      <li><a href="#features">features</a></li>
-      <li><a href="#product">product</a></li>
-      <li><a href="#contact">contact</a></li>
-      <li><a href="#faq">FAQ</a></li> -->
+      <li><a class="active" href="#cont">SOTO 구매 신청</a></li>     
     </ul>
   </nav>
-</header>
+</header> -->
 <div id="rbbtn4">
 <a href="#cont"><img src="{% static 'images/write04.png' %}" alt=""></a>
 <br>
@@ -220,6 +220,9 @@ header .navbar ul li a.active::before, header #menu {
 <br>
 <br>
 <a href=""><img src="{% static 'images/phone02.png' %}" alt=""></a>
+<br>
+<br>
+<a href="#top"><img src="{% static 'images/top.png' %}" alt=""></a>
 </div>
 <section>
 {% if form.errors %}
@@ -232,7 +235,7 @@ header .navbar ul li a.active::before, header #menu {
         </strong>
         </div>			
         {% endif %}
-  <img class="landingpic001" src="{% static 'images/p001.png' %}" alt="">
+  <img id="top" class="landingpic" src="{% static 'images/p001.png' %}" alt="">
   <img class="landingpic" src="{% static 'images/p002.png' %}" alt="">
   <img class="landingpic" src="{% static 'images/p003.png' %}" alt="">
   <img class="landingpic" src="{% static 'images/p004.png' %}" alt="">
@@ -243,7 +246,7 @@ header .navbar ul li a.active::before, header #menu {
 </section> 
 
 <section class="contact" id="contact">
-  <h1 class="heading">SOTO 구매 상담 신청</h1>
+  <h1 class="heading">구매 상담 신청</h1>
   <br>
   <!-- <h1 class="title">contact us for latest updates</h1> -->
   
