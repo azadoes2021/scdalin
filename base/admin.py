@@ -9,7 +9,7 @@ class CollectingdbAdmin(admin.ModelAdmin):
     # 'status' ex. 완료 진행중 둘중 하나로 어드민에서 '필터' 가능하도록 할 것
     #
     list_filter = ('cate001','dhname', 'name', 'number', 'address001', 'status', 'created', )
-    list_display = ('cate001','dhname', 'name', 'number', 'address001', 'status', 'created', )
+    list_display = ('cate001', 'dhname', 'name', 'number', 'address001', 'status', 'created', )
     # 
 
 

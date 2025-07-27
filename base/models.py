@@ -35,15 +35,15 @@ class Collectingdb(models.Model):
         ('제주시','제주시'),
     )
     CATE001_CHOICES = (
-        ('구매','구매'),
-        ('렌탈','렌탈'),
+        ('미용실','미용실'),
+        ('애견미용실','애견미용실'),
         
     )
     # [중요 title 없앨것입니다]
     # title = models.CharField(max_length=100, verbose_name='제목', default='') 
 
-    cate001 = models.CharField(max_length=10, choices=CATE001_CHOICES, null=True, verbose_name='구매/렌탈')
-    dhname = models.CharField(max_length=50 ,null=True, verbose_name='치과명')
+    cate001 = models.CharField(max_length=30, choices=CATE001_CHOICES, null=True, verbose_name='미용실/애견미용실')
+    dhname = models.CharField(max_length=50 ,null=True, verbose_name='미용실명')
     name = models.CharField(max_length=50 ,null=True, verbose_name='성함')
     number = models.CharField(max_length=50 ,null=True, verbose_name='전화번호')
     # email = models.EmailField(max_length=50 ,null=True, verbose_name='이메일')

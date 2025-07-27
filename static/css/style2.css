@@ -11,7 +11,7 @@
   text-decoration: none;
   /* transition: all .2s linear; */
 
-  text-transform: capitalize;
+  text-transform: lowercase;
 }
 
 *::selection {
@@ -132,7 +132,7 @@ header #menu {
 .contact {
   min-height: 80rem;
   text-align: center;
-  background: rgb(252 252 252);
+  background: rgb(247 247 247);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

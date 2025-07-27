@@ -1,13 +1,1021 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>페이지핏 랜딩페이지 제작</title>
-</head>
-<body>
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="ko">
+    <head>
+        <title>가위달인</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="ThemeZaa">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 48+ ready demos.">
+    
+        <meta content="가위달인" name="title">
+        <meta name="keywords" content="가위달인, 미용실, 애견미용실" />
+        <meta name="description" content="최고 수준의 가위 연마 솔루션 제공" />
+        <meta content="가위달인 홈페이지" property="og:title">
+        <meta content="가위달인" property="og:site_name">
+        <meta content="최고 수준의 가위 연마 솔루션 제공하기 위해 노력하고 있습니다. 함께 건강한 공기를 만들어갑니다." property="og:description">
+        <meta content="가위달인, 미용가위, 애견미용가위, 미용실, 애견미용실, 미용, 애견미용" property="og:keyword">
+        <meta content="website" property="og:type">
+        <meta content="" property="og:url">
+        <!-- <meta content="" property="og:image"> -->
+        
+        <!-- <link href="https://pagefyt.com/"  rel="canoninal"> -->
+        
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="{% static 'images/scissorsblack.png' %}">
+
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="{% static 'css/vendors.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/icon.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/beauty-salon.css' %}" /> -->
+    </head>
+    <style>
+      #contact {
+    /* max-width: 800px; */
+    max-width: 1000px;
+    margin: auto;
+  }
+  .section2 {
+    text-align: center;
+    margin-top: 100px;
+    padding: 100px 0;
+}
+.section2 > .inner {
+    display: inline-block;
+}
+
+.section2 > .inner > div > a:first-child {
+    display: inline-block;
+    margin-bottom: 40px;
+}
+@media screen and (min-width: 340px) and (max-width: 500px) {
+    .section2 {
+        margin-top: 30px;
+        padding: 50px;
+    }
+}  
+.ctitle {
+    font-size: 2rem;
+    color :#fff
+  }
+  label {
+    font-size: 1.8rem;
+  }
+        #rbbtn4 {
+    position: fixed;
+    width: 5rem;
+    right: 5%;
+    /* top: 30%; */
+    top: 35%;
+    z-index: 10000;
+  }
+    .rbbtn {margin-bottom: 1rem;}
+
+ 
+a {
+    text-decoration: none;
+  }
+  #rbbtn4 {
+    position: fixed;
+    width: 10rem;
+    right: 5%;
+    /* top: 30%; */
+    top: 35%;
+  }
+  a:link {
+    color: #fff;text-decoration: none;
+  }
+  a:visited {text-decoration: none;color: white;}
+  #myDIV {
+    height: 100px;
+    width: 100%;
+    overflow: auto;
+    font-size: 2.0rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    display: none;
+    margin-top: 1.5rem;
+}
+#myDIV.agree_active {
+  display: block;
+}
+.contact {
+    min-height: 96rem;
+  }
+
+  @media (max-width:500px) {
+  
+    #rbbtn4 {    
+    top: 50%;  
+    width: 8rem;
+  }
+  
+}
+    </style>
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#2E3844" class="custom-cursor">
+        <!-- start cursor -->
+        <div class="cursor-page-inner">
+            <div class="circle-cursor circle-cursor-inner"></div>
+            <div class="circle-cursor circle-cursor-outer"></div>
+        </div>
+        <!-- end cursor -->
+        <!-- start header -->
+        <!-- <header> 
+            
+            <nav class="navbar navbar-expand-lg header-transparent bg-transparent border-bottom border-color-transparent-white-light disable-fixed">
+                <div class="container-fluid">
+                    <div class="col-auto col-xxl-3 col-lg-2 me-lg-0 me-auto">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/scissorswhite.png" data-at2x="images/demo-beauty-salon-logo-white@2x.png" alt="" class="default-logo">
+                            <img src="images/scissorsblack.png" data-at2x="images/demo-beauty-salon-logo-black@2x.png" alt="" class="alt-logo">
+                            <img src="images/scissorsblack.png" data-at2x="images/demo-beauty-salon-logo-black@2x.png" alt="" class="mobile-logo"> 
+                        </a>
+                    </div>
+                    <div class="col-auto menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav"> 
+                            <ul class="navbar-nav"> 
+                                <li class="nav-item"><a href="#" class="nav-link">홈</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">스토리</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">서비스</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">프로세스</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">기타</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">비용</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-xxl-3 col-lg-2 text-end d-none d-sm-flex">
+                        <div class="header-icon">
+                            <div class="d-none d-xxl-inline-block me-25px lg-me-0"><a href="tel:1800222000" class="widget-text text-white-hover fs-17"><i class="feather icon-feather-phone-call me-10px"></i>1 800 222 000</a></div>
+                            <div class="header-button"><a href="#" class="btn btn-very-small border-1 btn-transparent-white-light btn-round-edge">신청하기</a></div>
+                        </div>  
+                    </div>
+                </div>
+            </nav>
+            
+        </header> -->
+        <!-- end header -->
+
+        <div id="rbbtn4">
+<a href="#contact"><img class="rbbtn" src="{% static 'images/write04.png' %}" alt=""></a>
+<br>
+<a href=""><img class="rbbtn" src="{% static 'images/kakaotalks02.png' %}" alt=""></a>
+<br>
+<a href=""><img class="rbbtn" src="{% static 'images/phone02.png' %}" alt=""></a>
+<br>
+<a href="#top"><img class="rbbtn" src="{% static 'images/top.png' %}" alt=""></a>
+</div> 
+        
+        
+        {% if form.errors %}
+        <br class="">
+        <br class="">
+        <div class="upsideerrorstyling" style="text-align: center;font-size: 2rem;">
+        <strong style="color: red;"> 
+            <p>신청이 완료되지 않았습니다.</p>
+            <!-- <p>***필수사항을 모두 입력하세요***</p> -->
+            <p> 미용실명, 성함/상호, 전화번호, 지역란을</p>
+            <p> 다시 한번 체크해주세요!!</p>
+        </strong>
+        </div>
+        <br class="">
+        <br class="">
+									
+									
+							
+        {% endif %}
+        <!-- start banner slider -->
+        <section id="top" class="pb-0 top-space-padding bg-dark-gray full-screen border-top position-relative md-h-700px sm-h-600px sm-pb-70px" data-parallax-background-ratio="0.3" style="background-image: url('{% static 'images/scissorwithhammer.jpeg' %}')">
+            <div class="position-absolute left-0px top-0px d-none d-lg-inline-block" data-anime='{ "el": "childs", "translateY": [100, 0], "opacity": [0,1], "duration": 600, "delay": 600, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <!-- <img src="images/demo-beauty-salon-home-banner-bg.png" data-bottom-top="transform: translateY(-150px)" data-top-bottom="transform: translateY(150px)" alt=""> -->
+            </div>
+            <div class="pe-8 pt-8 absolute-middle-right lg-pe-2 lg-pt-2 d-none d-lg-inline-block">
+                <!-- <img src="images/demo-beauty-salon-banner-img.png" class="animation-rotation" alt=""> -->
+            </div>
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-md-6 sm-ms-5 position-relative" data-anime='{ "el": "childs", "translateY": [30, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>  
+                        <span class="fs-16 text-uppercase text-white fw-700 mb-10px ls-1px d-inline-block" style="">가위달인</span>
+                        
+                        <div class="alt-font fw-600 fs-80 text-white ls-minus-3px lh-120 mb-25px lg-fs-40 xs-fs-50 xs-lh-80 lg-lh-100">날을 세우는 것을 넘어, <br> 가치를 되살립니다. </div> 
+                        <div class="text-white fw-700 fs-20 w-60 mb-35px xs-mb-25px lg-w-75 md-w-100 sm-w-70 xs-w-90">헤어 디자이너와 애견 미용사를 위한 <br> 국내 최고의 정밀 가위 연마 솔루션 </div>
+                        <a href="#contact" class="btn btn-large btn-base-color btn-hover-animation-switch btn-round-edge btn-box-shadow">
+                            <span>
+                                <span class="fs-20 btn-text">상담신청</span>
+                                <span class="btn-icon"><i class="fa-solid fa-arrow-right fs-14"></i></span>
+                                <span class="btn-icon"><i class="fa-solid fa-arrow-right fs-14"></i></span>
+                            </span> 
+                        </a>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <!-- end banner slider --> 
+        <!-- start banner slider -->
+        <!-- <section class="p-0 position-relative bg-very-light-gray">
+            <div class="container">
+                <div class="w-50 bg-white position-absolute top-minus-40px left-0px text-end">
+                    <div class="fs-15 lh-30 text-dark-gray pt-5px pb-5px ps-25px pe-25px fw-600 d-inline-block bg-yellow">wow awesome!</div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 icon-with-text-style-01 pt-40px pb-40px pe-8 lg-pe-15px xs-pb-30px" data-anime='{ "el": "childs", "translateX": [-30, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue":200, "easing": "easeOutQuad" }'>
+                        <div class="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
+                            <div class="feature-box-icon me-25px">
+                                <img src="https://via.placeholder.com/95x125" class="h-65px" alt="">
+                            </div>
+                            <div class="feature-box-content">
+                                <h6 class="text-dark-gray fw-400 mb-0 alt-font ls-minus-05px">Best beauty salon <span class="text-decoration-line-bottom-medium">award 2023</span></h6>
+                                <p>Multi award winning beauty salon services.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-40px pb-40px xs-pt-30px ps-8 lg-ps-15px" data-anime='{ "el": "childs", "translateX": [30, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue":200, "easing": "easeOutQuad" }'>
+                        <h6 class="fw-400 mb-0 alt-font"><a href="demo-beauty-salon-story.html" class="text-dark-gray text-dark-gray-hover">Get <span class="text-decoration-line-bottom-medium">20%</span> off on bridal makeup<i class="bi bi-arrow-right align-middle icon-extra-medium position-relative top-3px md-top-0px ms-10px"></i></a></h6>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- end banner slider -->
+        <!-- start banner slider -->
+        
+
+        <section class="p-0 bg-very-light-gray">
+            <div class="container-fluid p-0"> 
+                <div class="row align-items-center g-0">
+                    <div class="col-xl-6 col-lg-6 position-relative top-minus-2px md-mb-30px" data-anime='{ "effect": "slide", "color": "#eee", "direction":"lr", "easing": "easeOutQuad", "duration": 600, "delay":500}'> 
+                        <img src="{% static 'images/scissorwithmicroscope.jpeg' %}" class="border-radius-rb-50px" alt="">
+                    </div>
+                    <div class="col-xl-4 col-lg-6 offset-xl-1 lg-ps-15px lg-pe-15px text-center text-lg-start" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'> 
+                        <span class="fs-16 text-uppercase text-gradient-san-blue-new-york-red fw-700 mb-10px ls-1px d-inline-block">가위달인</span>
+                        <!-- <h2 class="alt-font lh-sm fw-400 text-dark-gray w-75 xl-w-90 lg-w-100 ls-minus-1px">혹시 당신의 도구도 <br> 이런 신호를 보내고 <br> 있으신가요?</h2> -->
+                        <h2 class="alt-font lh-sm fw-400 text-dark-gray w-75 xl-w-90 lg-w-100 ls-minus-1px">원장님, 최고의 실력을 가진 <br> 당신의 가위는 어떻습니까?</h2>
+                      
+                        <h4 class="mb-30px w-80 xl-w-90 lg-w-100 lg-mb-25px">
+                            <i class="fa-solid fa-check align-middle icon-small text-base-color"></i> 머리카락/동물 털이 밀리고 씹히기 시작했다.
+                        </h4>
+                        <h4 class="mb-30px w-80 xl-w-90 lg-w-100 lg-mb-25px">
+                            <i class="fa-solid fa-check align-middle icon-small text-base-color"></i> 커팅 시 손목에 무리가 가고 피로감이 심해졌다.
+                        </h4>
+                        <h4 class="mb-30px w-80 xl-w-90 lg-w-100 lg-mb-25px">
+                            <i class="fa-solid fa-check align-middle icon-small text-base-color"></i> 고가의 가위, 아무에게나 맡길 수 없다.
+                        </h4>
+                        <h2 class="alt-font lh-sm fw-400 text-dark-gray w-75 xl-w-90 lg-w-100 ls-minus-1px">가위 하나만 집중, <br> '가위달인'이 정답입니다.</h2>
+                        
+                        <div class="d-sm-flex align-items-center justify-content-center justify-content-lg-start">
+                            <!-- <a href="demo-beauty-salon-story.html" class="btn btn-large btn-dark-gray btn-hover-animation-switch btn-round-edge btn-box-shadow xs-me-20px xs-mb-10px">
+                                <span> 
+                                    <span class="btn-text">About story</span>
+                                    <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
+                                </span>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=cfXHhfNy7tU" class="btn btn-link hover-text-light btn-extra-large text-dark-gray popup-youtube xs-ps-0 xs-mb-10px"><i class="bi bi-play-circle align-middle lh-normal icon-extra-medium me-10px"></i>Luxury salon</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end banner slider -->
+        
+        <!-- start section -->
+        <section class="overlap-height">
+            <div class="container overlap-gap-section">
+                <div class="row justify-content-center align-items-center mb-6" data-anime='{ "el": "childs", "translateY": [30, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue":200, "easing": "easeOutQuad" }'>
+                    <div class="col-auto pe-25px border-2 border-end border-color-dark-gray sm-border-end-0 sm-pe-15px">
+                        <span class="fs-16 text-uppercase text-gradient-san-blue-new-york-red fw-700 ls-1px">서비스</span>
+                    </div>
+                    <div class="col-12 col-md-auto ps-25px sm-ps-15px text-center">
+                        <h3 class="alt-font lh-sm fw-400 text-dark-gray ls-minus-1px mb-0">가위달인의 손길은 결과로 증명합니다.</h3>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 transition-inner-all justify-content-center mb-4" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    
+                    <!-- start fancy text box item -->
+                    <div class="col mb-20px">
+                        <div class="services-box-style-01 hover-box">
+                            <div class="position-relative box-image border-radius-6px overflow-hidden">
+                                <a href="#">
+                                    <img src="{% static 'images/fixingscissors.jpeg' %}" alt="">
+                                    <div class="box-overlay bg-gradient-blue-ironstone-brown"></div>
+                                    <!-- <span class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-65px h-65px rounded-circle border border-color-transparent-white border-1"><i class="bi bi-arrow-right-short text-white icon-very-medium d-flex"></i></span> -->
+                                </a>
+                            </div>
+                            <div class="p-25px last-paragraph-no-margin text-center">
+                                <span class="fs-22 text-dark-gray alt-font">달인의 노하우</span>
+                                <p class="lh-26">20년 외길, 수만 개의 가위를 되살린 경험으로 <br> 브랜드별 최적의 날 각을 찾아냅니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end fancy text box item -->
+                    
+                    <!-- start fancy text box item -->
+                    <div class="col mb-20px">
+                        <div class="services-box-style-01 hover-box">
+                            <div class="position-relative box-image border-radius-6px overflow-hidden">
+                                <a href="#">
+                                    <img src="{% static 'images/scissorwithmicroscope2.jpeg' %}" alt="">
+                                    <div class="box-overlay bg-gradient-blue-ironstone-brown"></div>
+                                    <!-- <span class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-65px h-65px rounded-circle border border-color-transparent-white border-1"><i class="bi bi-arrow-right-short text-white icon-very-medium d-flex"></i></span> -->
+                                </a>
+                            </div>
+                            <div class="p-25px last-paragraph-no-margin text-center">
+                                <span class="fs-22 text-dark-gray alt-font">각도 정밀 진단 시스템</span>
+                                <p class="lh-26">각도 연마 장비로 최상의 절삭력을 자랑합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end fancy text box item -->
+                    
+                    <!-- start fancy text box item -->
+                    <div class="col mb-20px">
+                        <div class="services-box-style-01 hover-box">
+                            <div class="position-relative box-image border-radius-6px overflow-hidden">
+                                <a href="#">
+                                    <img src="{% static 'images/fixingscissors2.jpeg' %}" alt="">
+                                    <div class="box-overlay bg-gradient-blue-ironstone-brown"></div>
+                                    <!-- <span class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-65px h-65px rounded-circle border border-color-transparent-white border-1"><i class="bi bi-arrow-right-short text-white icon-very-medium d-flex"></i></span> -->
+                                </a>
+                            </div>
+                            <div class="p-25px last-paragraph-no-margin text-center">
+                                <span class="fs-22 text-dark-gray alt-font">완벽한 복원력 </span>
+                                <p class="lh-26">날의 손상을 '복원'하여 새것 같은 <br> 절삭력을 되찾아 드립니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end fancy text box item -->
+                    <!-- start fancy text box item -->
+                    <!-- <div class="col md-mb-20px">
+                        <div class="services-box-style-01 hover-box">
+                            <div class="position-relative box-image border-radius-6px overflow-hidden">
+                                <a href="demo-beauty-salon-services.html">
+                                    <img src="https://scissorwarrior.com/cdn/shop/files/MGL0429.jpg" alt="">
+                                    <div class="box-overlay bg-gradient-blue-ironstone-brown"></div>
+                                    <span class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-65px h-65px rounded-circle border border-color-transparent-white border-1"><i class="bi bi-arrow-right-short text-white icon-very-medium d-flex"></i></span>
+                                </a>
+                            </div>
+                            <div class="p-25px last-paragraph-no-margin text-center">
+                                <span class="fs-22 text-dark-gray alt-font">Skin care</span>
+                                <p class="lh-26">Believe in your beauty</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- end fancy text box item -->
+                    <!-- start fancy text box item -->
+                    <!-- <div class="col md-mb-20px">
+                        <div class="services-box-style-01 hover-box">
+                            <div class="position-relative box-image border-radius-6px overflow-hidden">
+                                <a href="demo-beauty-salon-services.html">
+                                    <img src="https://scissorwarrior.com/cdn/shop/files/MGL0432-2-vert.jpg" alt="">
+                                    <div class="box-overlay bg-gradient-blue-ironstone-brown"></div>
+                                    <span class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-65px h-65px rounded-circle border border-color-transparent-white border-1"><i class="bi bi-arrow-right-short text-white icon-very-medium d-flex"></i></span>
+                                </a>
+                            </div>
+                            <div class="p-25px last-paragraph-no-margin text-center">
+                                <span class="fs-22 text-dark-gray alt-font">Cosmetology</span>
+                                <p class="lh-26">Fabulous in every way</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- end fancy text box item -->
+                    <!-- start fancy text box item -->
+                    <!-- <div class="col">
+                        <div class="services-box-style-01 hover-box">
+                            <div class="position-relative box-image border-radius-6px overflow-hidden">
+                                <a href="demo-beauty-salon-services.html">
+                                    <img src="https://scissorwarrior.com/cdn/shop/files/MGL0439.jpg" alt="">
+                                    <div class="box-overlay bg-gradient-blue-ironstone-brown"></div>
+                                    <span class="d-flex justify-content-center align-items-center mx-auto icon-box absolute-middle-center z-index-1 w-65px h-65px rounded-circle border border-color-transparent-white border-1"><i class="bi bi-arrow-right-short text-white icon-very-medium d-flex"></i></span>
+                                </a>
+                            </div>
+                            <div class="p-25px last-paragraph-no-margin text-center">
+                                <span class="fs-22 text-dark-gray alt-font">Grooming</span>
+                                <p class="lh-26">Especially crafted to suit</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- end fancy text box item -->
+                </div> 
+                <!-- start pricing style -->
+                
+            </div>
+        </section>
+        <!-- end section -->
+        
+        <section class="overlap-height bg-very-light-gray">
+            <div class="container overlap-gap-section">
+                <div class="row justify-content-center align-items-center mb-6" data-anime='{ "el": "childs", "translateY": [30, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue":200, "easing": "easeOutQuad" }'>
+                    <div class="col-auto pe-25px border-2 border-end border-color-dark-gray sm-border-end-0 sm-pe-15px">
+                        <span class="fs-16 text-uppercase text-gradient-san-blue-new-york-red fw-700 ls-1px">솔루션</span>
+                    </div>
+                    <div class="col-12 col-md-auto ps-25px sm-ps-15px text-center">
+                        <h3 class="alt-font fw-400 text-dark-gray ls-minus-1px mb-0">헤어 디자이너와 애견 미용사를 위한 맞춤 솔루션</h3>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 transition-inner-all justify-content-center mb-4" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <!-- start fancy text box item -->
+                    
+                </div> 
+                <!-- start pricing style -->
+                <div class="row justify-content-between align-items-center mb-5 xs-mb-6">
+                    <div class="col-lg-12 pe-50px lg-pe-30px md-pe-15px pricing-table-style-09" data-anime='{ "el": "childs", "translateX": [-30, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue":200, "easing": "easeOutQuad" }'>
+                        <div class="align-self-center row border-top border-color-extra-medium-gray g-0 xs-pt-20px xs-pb-20px">
+                            <div class="col-sm-3 text-center align-self-center xs-pt-40px">
+                                <img src="{% static 'images/haircutting.png' %}" class="w-55px" alt="">
+                            </div>
+                            <div class="col-sm-3 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-50px pb-50px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                <span class="alt-font text-dark-gray fs-20 lg-fs-19">헤어 디자이너</span>
+                                <p class="lh-26">권장주기: 약 2년</p>
+                            </div>
+
+                            
+
+                            <div class="col-sm-3 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-30px pb-30px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                
+                                <p class="lh-26">블런트, 틴닝 가위 본연의 커팅감 100% 복원 <br> (정교한 텍스처링 가능, 손목 부담 최소화)</p>
+                            </div>
+                            <div class="col-sm-3 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-70px pb-70px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                
+                                <h4 class="alt-font xs-fs-40 text-dark-gray mb-0 fw-400 fs-30">20,000원/자루</h4>
+                            </div>
+                        </div>
+
+                        <div class="row border-top border-bottom border-color-extra-medium-gray g-0 xs-pt-20px xs-pb-20px">
+                            <div class="col-sm-3 align-self-center text-center xs-pt-40px">
+                                <img src="{% static 'images/grooming.png' %}" class="w-55px" alt="">
+                            </div>
+                            <div class="col-sm-3 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-50px pb-50px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                <span class="alt-font text-dark-gray fs-20 lg-fs-19">애견 미용사</span>
+                                <p class="lh-26">권장주기: 약 6개월</p>
+                            </div>
+                            <div class="col-sm-3 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-30px pb-30px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                
+                                <p class="lh-26">엉킨 털도 막힘없이, 더 빠르고 안전하게. <br> (두꺼운 털도 부드럽게 절삭, 손의 피로도 감소)</p>
+                            </div>
+                            <div class="col-sm-3 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-70px pb-70px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                
+                                <h4 class="alt-font xs-fs-40 text-dark-gray mb-0 fw-400 fs-30">8,000원/자루</h4>
+                            </div>
+                        </div>
+
+                            
+                        </div>
+                        <!-- <div class="row border-top border-bottom border-color-extra-medium-gray align-items-center g-0 xs-pt-20px xs-pb-20px">
+                            <div class="col-sm-3 align-self-center text-center">
+                                <img src="https://via.placeholder.com/100x105" class="w-55px" alt="">
+                            </div>
+                            <div class="col-sm-7 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-30px pb-30px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                <span class="alt-font text-dark-gray fs-20 lg-fs-19">Haircut by expert</span>
+                                <p class="lh-26">Get the best haircut</p>
+                            </div>
+                            <div class="col-sm-2 text-center text-sm-start align-self-center">
+                                <h4 class="alt-font text-dark-gray mb-0 fw-400">$25</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ps-50px lg-ps-30px md-ps-15px pricing-table-style-09" data-anime='{ "el": "childs", "translateX": [30, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue":200, "easing": "easeOutQuad" }'>
+                        <div class="row border-top border-color-extra-medium-gray g-0 md-border-top-0 xs-pt-20px xs-pb-20px">
+                            <div class="col-sm-3 text-center align-self-center">
+                                <img src="https://via.placeholder.com/100x105" class="w-55px" alt="">
+                            </div>
+                            <div class="col-sm-7 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-30px pb-30px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                <span class="alt-font text-dark-gray fs-20 lg-fs-19">New hair styling</span>
+                                <p class="lh-26">Trendy and glam hair style</p>
+                            </div>
+                            <div class="col-sm-2 text-center text-sm-start align-self-center">
+                                <h4 class="alt-font text-dark-gray mb-0 fw-400">$25</h4>
+                            </div>
+                        </div>
+                        <div class="row border-top border-color-extra-medium-gray align-items-center g-0 xs-pt-20px xs-pb-20px">
+                            <div class="col-sm-3 align-self-center text-center">
+                                <img src="https://via.placeholder.com/100x105" class="w-55px" alt="">
+                            </div>
+                            <div class="col-sm-7 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-30px pb-30px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                <span class="alt-font text-dark-gray fs-20 lg-fs-19">Wash and plain dry</span>
+                                <p class="lh-26">Advanced hair treatment</p>
+                            </div>
+                            <div class="col-sm-2 text-center text-sm-start align-self-center">
+                                <h4 class="alt-font text-dark-gray mb-0 fw-400">$45</h4>
+                            </div>
+                        </div>
+                        <div class="row border-top border-bottom border-color-extra-medium-gray align-items-center g-0 xs-pt-20px xs-pb-20px">
+                            <div class="col-sm-3 align-self-center text-center">
+                                <img src="https://via.placeholder.com/100x105" class="w-55px" alt="">
+                            </div>
+                            <div class="col-sm-7 text-center text-sm-start last-paragraph-no-margin ps-40px pe-40px pt-30px pb-30px border-start border-color-extra-medium-gray xs-border-start-0 lg-ps-20px lg-pe-20px">
+                                <span class="alt-font text-dark-gray fs-20 lg-fs-19">Organic skin treatment </span>
+                                <p class="lh-26">Reduce dryness from skin</p>
+                            </div>
+                            <div class="col-sm-2 text-center text-sm-start align-self-center">
+                                <h4 class="alt-font text-dark-gray mb-0 fw-400">$55</h4>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- end pricing style -->
+                
+            </div>
+        </section>
+        <!-- end section --> 
+        
+        <!-- start section --> 
+        <section class="overlap-height">
+            <div class="container overlap-gap-section">
+                <div class="row justify-content-center align-items-center mb-3" data-anime='{ "el": "childs", "translateY": [30, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue":200, "easing": "easeOutQuad" }'>
+                    <div class="col-auto pe-25px border-2 border-end border-color-dark-gray sm-border-end-0 sm-pe-15px">
+                        <span class="fs-16 text-uppercase text-gradient-san-blue-new-york-red fw-700 ls-1px">프로세스</span>
+                    </div>
+                    <div class="col-12 col-md-auto ps-25px sm-ps-15px text-center">
+                        <h3 class="alt-font fw-400 text-dark-gray ls-minus-1px mb-0">이제, 달인의 손길을 경험할 차례입니다</h3>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 transition-inner-all justify-content-center mb-4" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <!-- start fancy text box item -->
+                    
+                </div> 
+                <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2" data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                    <!-- start process step item -->
+                    <div class="col process-step-style-03 text-center last-paragraph-no-margin hover-box md-mb-50px">
+                        <div class="position-relative mb-25px">
+                            <span class="progress-step-separator bg-base-color w-20 separator-line-1px opacity-3"></span>
+                            <div class="d-inline-block position-relative overflow-hidden border-radius-100 progress-image w-180px h-180px">
+                                <!-- <img src="https://craftohtml.themezaa.com/images/demo-accounting-process-03.jpg" alt=""> -->
+                                <div class="box-overlay bg-gradient-green-yellow-color"></div>
+                                <span class="number icon-extra-large text-black absolute-middle-center"><i class="line-icon-Hand-TouchSmartphone"></i></span>
+                            </div>
+                        </div>
+                        <span class="d-inline-block fs-19 text-dark-gray mb-5px fw-600 ls-minus-05px">1. 온라인/전화 접수</span>
+                        <p class="w-85 lg-w-95 mx-auto">간편하게 서비스를 신청하고 택배수거를 요청하세요</p>
+                    </div>
+                    <!-- end process step item -->                    
+                    <!-- start process step item -->
+                    <div class="col process-step-style-03 text-center last-paragraph-no-margin hover-box md-mb-50px">
+                        <div class="position-relative mb-25px">
+                            <span class="progress-step-separator bg-base-color w-20 separator-line-1px opacity-3"></span>
+                            <div class="d-inline-block position-relative overflow-hidden border-radius-100 progress-image w-180px h-180px">
+                                <!-- <img src="https://craftohtml.themezaa.com/images/demo-accounting-process-03.jpg" alt=""> -->
+                                <div class="box-overlay bg-gradient-green-yellow-color"></div>
+                                <span class="number icon-extra-large text-black absolute-middle-center"><i class="line-icon-Check"></i></span>
+                            </div>
+                        </div>
+                        <span class="d-inline-block fs-19 text-dark-gray mb-5px fw-600 ls-minus-05px">2. 정밀 진단</span>
+                        <p class="w-85 lg-w-95 mx-auto">입고된 가위의 상태를 마이크로스코프로 정밀 진단합니다.</p>
+                    </div>
+                    <!-- end process step item -->                    
+                    <!-- start process step item -->
+                    <div class="col process-step-style-03 text-center last-paragraph-no-margin hover-box xs-mb-50px">
+                        <div class="position-relative mb-25px">
+                            <span class="progress-step-separator bg-base-color w-20 separator-line-1px opacity-3"></span>
+                            <div class="d-inline-block position-relative overflow-hidden border-radius-100 progress-image w-180px h-180px">
+                                <!-- <img src="https://craftohtml.themezaa.com/images/demo-accounting-process-03.jpg" alt=""> -->
+                                <div class="box-overlay bg-gradient-green-yellow-color"></div>
+                                <span class="number icon-extra-large text-black absolute-middle-center"><i class="line-icon-Scissor"></i></span>
+                            </div>
+                        </div>
+                        <span class="d-inline-block fs-19 text-dark-gray mb-5px fw-600 ls-minus-05px">3. 맞춤 연마</span>
+                        <p class="w-85 lg-w-95 mx-auto">진단 결과를 바탕으로 최적의 각도와 방식으로 연마를 진행합니다.</p>
+                    </div>
+                    <!-- end process step item -->                    
+                    <!-- start process step item -->
+                    <div class="col process-step-style-03 text-center last-paragraph-no-margin hover-box">
+                        <div class="position-relative mb-25px">
+                            <div class="d-inline-block position-relative overflow-hidden border-radius-100 progress-image w-180px h-180px">
+                                <!-- <img src="https://craftohtml.themezaa.com/images/demo-accounting-process-03.jpg" alt=""> -->
+                                <div class="box-overlay bg-gradient-green-yellow-color"></div>
+                                <span class="number icon-extra-large text-black absolute-middle-center"><i class="line-icon-Box-Close"></i></span>
+                            </div>
+                        </div>
+                        <span class="d-inline-block fs-19 text-dark-gray mb-5px fw-600 ls-minus-05px">4. 검수 및 안전 포장</span>
+                        <p class="w-85 lg-w-95 mx-auto">완벽한 커팅감 테스트후, 안전하게 포장하여 발송합니다.</p>
+                    </div>
+                    <!-- end process step item -->                    
+                </div>
+            </div>
+        </section>
+        <!-- end section --> 
+        
+        <!-- start section -->
+        <!-- <section class="p-0 h-550px sm-h-auto position-relative">
+            <div id="map" class="map h-100 sm-h-350px w-100 position-absolute sm-position-relative" data-map-options='{ "lat": -37.805688, "lng": 144.962312, "style": "Silver", "marker": { "type": "image", "class": "marker01", "src": "https://via.placeholder.com/100x100" }, "popup": { "defaultOpen": false, "html": "<div class=infowindow><strong class=\"mb-3 d-inline-block alt-font\">Crafto Beauty Salon</strong><p class=\"alt-font\">16122 Collins street, Melbourne, Australia</p></div><div class=\"google-maps-link alt-font\"> <a aria-label=\"View larger map\" target=\"_blank\" jstcache=\"31\" href=\"https://maps.google.com/maps?ll=-37.805688,144.962312&amp;z=17&amp;t=m&amp;hl=en-US&amp;gl=IN&amp;mapclient=embed&amp;cid=13153204942596594449\" jsaction=\"mouseup:placeCard.largerMap\">VIEW LARGER MAP</a></div>" } }'></div>
+            <div class="container h-100 position-relative sm-pt-30px sm-pb-30px pointer-events-none" data-anime='{"translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <div class="row h-100 align-items-end justify-content-end align-items-lg-center pointer-events-none">
+                    <div class="col-md-auto pointer-events-all"> 
+                        <div class="bg-white box-shadow-quadruple-large w-380px md-w-300px sm-w-100 border-radius-6px md-mb-20px xs-mb-0">
+                            <div class="ps-60px pe-60px pt-50px pb-40px md-p-30px text-center text-md-start">
+                                <h4 class="alt-font text-dark-gray mb-10px">Contact us</h4>
+                                <span class="text-dark-gray fw-600">Crafto beauty salon</span>
+                                <p class="w-80 mb-10px lh-30 sm-w-100">401 Broadway, 24th Floor New York, NY 10013</p>
+                                <div class="w-100 d-block">
+                                    <span class="d-block"><span class="fw-600 text-dark-gray">Phone:</span> <a href="tel:1800222000" class="text-medium-gray">1-800-222-000</a></span>
+                                    <span class="d-block"><span class="fw-600 text-dark-gray">Email:</span> <a href="mailto:info@yourdomain.com" class="text-dark-gray text-decoration-line-bottom fw-500">info@yourdomain.com</a></span>
+                                </div>
+                            </div>
+                            <div class="text-center pt-15px pb-15px border-top border-color-extra-medium-gray">
+                                <a href="https://www.google.com/maps/place/Envato/@-37.8041098,144.9615898,16z/data=!4m5!3m4!1s0x0:0xb6899234e561db11!8m2!3d-37.8056733!4d144.9623021?hl=en-US" target="_blank" class="btn btn-link btn-hover-animation-switch btn-large text-dark-gray text-uppercase btn-icon-left fw-700 p-0">
+                                    <span>
+                                        <span class="btn-text">Show on google maps</span>
+                                        <span class="btn-icon"><i class="feather icon-feather-map-pin"></i></span>
+                                        <span class="btn-icon"><i class="feather icon-feather-map-pin"></i></span>
+                                    </span> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- end section -->
+
+        <section class="contact" id="contact">
+  <h1 class="heading">상담 신청</h1>
+  <br>
+  <!-- <h1 class="title">contact us for latest updates</h1> -->
+            
+        {% load widget_tweaks %}
+        <form action="#" method="post">
+        {% csrf_token %}
+        {% if form.errors %}
+        <br>
+        
+        <div class="upsideerrorstyling" style="text-align: center;font-size: 2rem;">
+        <strong style="color: red;"> 
+            <p>신청이 완료되지 않았습니다.</p>
+            <!-- <p>***필수사항을 모두 입력하세요***</p> -->
+            <p> 미용실명, 성함/상호, 전화번호, 지역란을</p>
+            <p> 다시 한번 체크해주세요!!</p>
+        </strong>
+        </div>
+        <br class="">
+        <br class="">
+									
+									
+							
+        {% endif %}
+        {% for field in form %}
+            {% if field.name == 'cate001' %}
+            <div class="inputBox">
+            <label for="{{ field.id_for_label }}" class="">미용실/애견미용실<span style="color: red;">*</span></label>
+            <select name="{{ field.name }}" class="" id="{{ field.id_for_label }}">
+                <option value="">- 선택 -</option>
+                <option value="미용실">미용실</option>                              
+                <option value="애견미용실">애견미용실</option>              
+            </select> 
+            <!-- </div>          -->
+            {% elif field.name == 'dhname' %}  
+            <!-- <div class="inputBox">             -->
+            <label for="{{ field.id_for_label }}" class="">미용실명<span style="color: red;">*</span></label>
+            <input name="{{ field.name }}" type="text" placeholder="미용실명" id="{{ field.id_for_label }}">
+            </div>
+            {% elif field.name == 'name' %}  
+            <div class="inputBox">
+            <label for="{{ field.id_for_label }}" class="">성함<span style="color: red;">*</span></label>
+            <input name="{{ field.name }}" type="text" placeholder="성함" id="{{ field.id_for_label }}">
+            <!-- </div> -->
+            {% elif field.name == 'number' %}
+            <!-- <div class="inputBox"> -->
+            <label for="{{ field.id_for_label }}" class="">전화번호<span style="color: red;">*</span></label>
+            <input name="{{ field.name }}" type="text" placeholder="전화번호" id="{{ field.id_for_label }}">
+            </div>
+            {% elif field.name == 'address001' %}
+            <div class="inputBox">
+            <label for="{{ field.id_for_label }}" class="">지역선택<span style="color: red;">*</span></label>
+            <select name="{{ field.name }}" class="" id="{{ field.id_for_label }}">
+                <option value="">- 지역선택 -</option>
+                <option value="서울(서울이남)">서울(서울이남)</option>              
+                <option value="서울(서울이북)">서울(서울이북)</option>              
+                <option value="경기북부">경기북부</option>
+                <option value="경기남부">경기남부</option>
+                <option value="인천광역시">인천광역시</option>
+                <option value="강원도">강원도</option>
+                <option value="충청남도">충청남도</option>
+                <option value="대전광역시">대전광역시</option>
+                <option value="충청북도">충청북도</option>
+                <option value="세종시">세종시</option>
+                <option value="부산광역시">부산광역시</option>
+                <option value="울산광역시">울산광역시</option>
+                <option value="대구광역시">대구광역시</option>
+                <option value="경상북도">경상북도</option>
+                <option value="경상남도">경상남도</option>
+                <option value="전라남도">전라남도</option>
+                <option value="광주광역시">광주광역시</option>
+                <option value="전라북도">전라북도</option>
+                <option value="제주시">제주시</option>
+            </select> 
+            <!-- </div>             -->
+            
+            {% elif field.name == 'promoperson' %}  
+            <!-- <div class="inputBox"> -->
+            <label for="{{ field.id_for_label }}" class="">추천인<span style="color: red;">*</span></label>
+            <input name="{{ field.name }}" type="text" placeholder="추천인" id="{{ field.id_for_label }}">
+            </div>
+            {% elif field.name == 'terms_confirmed' %}
+            
+            <div id="myDIV" onscroll="myFunction()">
+            <div id="content" style="font-size: 1.8rem;">
+              제1조 개인정보 수집에 대한 동의
+
+              <OOO>(‘URL’이하 ‘사이트 가위달인’) 은(는) 고객은 사이트 회원 가입시 회원 약관, 개인정보 수집 및 이용 내용에 대해 「동의함」 버튼을 클릭할 수 있는 절차를 마련하여, 「동의함」 버튼을 클릭하면 개인정보 수집 및 이용에 대해 동의한 것으로 봅니다.
+              
+              제2조 개인정보의 수집 항목 및 이용 목적
+              
+              "개인정보"는 생존하는 개인에 관한 정보로서 해당 정보에 포함된 성명, 주민등록번호 등의 사항으로 해당 개인을 식별할 수 있는 정보(해당 정보만으로는 특정 개인을 식별할 수 없더라도 다른 정보와 쉽게 결합하여 식별할 수 있는 것을 포함)를 말합니다.
+              
+              사이트가 고객의 개인정보를 수집 이용하는 목적은 다음과 같습니다.
+              
+              일반 회원정보
+              
+              - 수집시기: 가입시
+              - 필수 수집항목: 아이디, 비밀번호, 이메일, 이름 *수정필요*
+              - 선택 수집항목: 프로필 이미지, 생년월일, 전화번호, 주소 *수정필요*
+              - 이용목적: 가입, 서비스 이용시 상담, 공지사항 전달
+              - 보유기간: 회원탈퇴시 즉시 삭제, 구매 회원인 경우 5년간 보관
+              
+              주문 정보(회원, 비회원 포함)
+              
+              - 수집시기: 주문시
+              - 필수 수집항목: 주문자 정보(이름, 주소, 전화번호, 이메일), 수취자 정보(이름, 주소, 전화번호), 결제 승인정보
+              - 선택 수집항목: 배송 메시지
+              - 이용목적: 주문 상품의 결제 및 배송
+              - 보유기간: 5년간 보관
+              
+              제3조 쿠키에 의한 개인정보 수집
+              
+              사이트는 고객에 대한 정보를 저장하고 수시로 찾아내는 '쿠키(cookie)'를 사용합니다. 쿠키는 웹사이트가 고객의 컴퓨터 브라우저(인터넷 익스플로러 등)에 전송하는 소량의 텍스트 파일입니다.
+              
+              ① 쿠키의 사용목적
+              
+              - 개인의 관심 분야에 따라 차별화된 정보를 제공
+              - 접속빈도 또는 방문시간 등을 분석하고 이용자의 취향과 관심분야를 파악하여 타겟(target) 마케팅 및 서비스 개선의 척도로 활용
+              - 쇼핑한 품목들에 대한 정보와 관심있게 둘러본 품목을 추적하여 개인 맞춤 쇼핑서비스 제공
+              
+              ② 쿠키의 운영 및 거부
+              
+              쿠키는 사용자의 컴퓨터 하드디스크에 저장되며, 사용자의 컴퓨터는 식별하지만 사용자를 개인적으로 식별하지는 않습니다.
+              또한 고객은 웹브라우저에 설정을 통해 모든 쿠키를 허용/거부하거나, 쿠키가 저장될 때마다 확인을 거치도록 할 수 있습니다.
+              단, 쿠키의 저장을 거부할 경우에는 로그인이 필요한 일부 서비스는 이용할 수 없습니다.
+              
+              ③ 쿠키 설정 거부 방법
+              
+              가. Internet Explorer의 경우
+              웹 브라우저 상단의 도구 메뉴 > 인터넷 옵션 > 개인정보 탭 > 직접 설정
+              
+              나. Chrome의 경우
+              웹 브라우저 우측 상단의 메뉴 아이콘 선택 > 설정 > 화면 하단의 고급 설정 표시 >개인정보 섹션의 콘텐츠 설정 버튼 > 쿠키 섹션에서 직접 설정
+              
+              제4조 개인정보의 보유 및 이용기간 및 파기
+              
+              ① 고객의 개인정보는 회원탈퇴 등 수집 및 이용목적이 달성되거나 동의철회 요청이 있는 경우 지체없이 파기됩니다.
+              단, 「전자상거래 등에서의 소비자보호에 관한 법률」 등 관련법령의 규정에 의하여 다음과 같이 거래 관련 권리 의무 관계의 확인 등을 이유로 일정기간 보유하여야 할 필요가 있을 경우에는 그 기간동안 보유합니다.
+              
+              가. 「전자상거래 등에서의 소비자보호에 관한 법률」 제6조
+              - 계약 또는 청약 철회 등에 관한 기록 : 5년
+              - 대금결재 및 재화 등의 공급에 관한 기록 : 5년
+              - 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+              
+              나. 「통신비밀보호법」 제15조의2
+              - 방문(로그)에 관한 기록: 1년
+              
+              다. 기타 관련 법령 등
+              
+              ② 사이트의 개인정보 파기방법은 다음과 같습니다.
+              
+              가. 파기절차
+              - 회원가입 등을 위해 입력한 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 일정기간 저장된 후 파기됩니다.
+              - 동 개인정보는 법률에 의한 경우가 아니고서는 보유되는 이외의 다른 목적으로 이용되지 않습니다.
+              
+              나. 파기방법
+              - 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.
+              - 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+              
+              ③ 사이트는 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 제29조 제2항에 따라 휴면회원(최근 12개월 동안 서비스를 이용하지 아니한 회원)에 대해 회원자격 상실에 대한 안내문을 통지하고, 안내문에서 정한 기한 내에 답변이 없을 경우 회원자격을 상실시킬 수 있습니다.
+              
+              이 경우, 휴면회원의 개인정보는 다른 회원의 개인정보와 분리하여 별도로 저장·관리 되며, 분리 저장된 개인정보는 법정보관기간 경과 후 파기하고 있습니다.
+              파기되지 않은 개인 정보 중 해당 이용자의 요청이 있는 경우 고객 정보는 서비스 이용을 재개하는 시점에 다시 제공됩니다.
+              
+              제5조 제3자에 대한 제공
+              
+              ① 사이트는 고객의 개인정보를 "제1조 개인정보의 수집항목 및 이용목적 "에서 고지한 범위를 넘어 이용하거나 타인 또는 타기업, 기관에 제공하지 않습니다.
+              ② 다음은 예외로 합니다.
+              가. 관계법령에 의하여 수사상의 목적으로 관계기관으로부터의 요구가 있을 경우
+              나. 통계작성, 학술연구나 시장조사 등을 위하여 특정 개인을 식별할 수 없는 형태로 광고주, 협력사나 연구단체 등에 제공하는 경우
+              다. 기타 관계법령에서 정한 절차에 따른 요청이 있는 경우
+              
+              상기사항에 의해 개인정보를 제공하는 경우에도 본래의 수집 및 이용 목적에 반하여 무분별하게 정보가 제공되지 않도록 최대한 노력하겠습니다.
+              
+              제6조 개인정보의 취급 위탁
+              
+              사이트는 보다 나은 서비스 제공, 고객편의 제공 등 원활한 업무 수행을 위하여 아래와 같이 개인정보 취급 업무를 외부 전문업체에 위탁하여 운영하고 있습니다.
+              
+              - 주문 상품의 배송: OO택배 *수정필요*
+              - 전산 시스템 구축 및 유지: 호스팅업체 *수정필요*
+              - 배송 추적 시스템 서비스: *수정필요*
+              - 결제 및 에스크로 서비스: PG사 *수정필요*
+              - 본인확인, 아이핀 서비스: *수정필요*
+              
+              ※ 수탁자에 공유되는 정보는 당해 목적을 달성하기 위하여 필요한 최소한의 정보에 국한됩니다. 또한 고객의 서비스 요청에 따라 해당하는 업체에 선택적으로 개인정보가 제공되고 있습니다.
+              ※ 위탁 업체 리스트는 해당 서비스 변경 및 계약기간에 따라 변경될 수 있으며 변경 시 공지사항을 통해 사전 공지합니다. 단기 이벤트는 참여 시에 개별 공지됩니다.
+              
+              제7조 개인정보의 열람 및 정정
+              
+              ① 고객께서는 언제든지 등록된 귀하의 개인정보를 열람하거나 정정하실 수 있습니다. 개인정보는 『회원정보변경』을 클릭하여 직접 열람하거나 정정할 수 있으며 개인정보보호책임자 또는 담당자 에게 서면이나 전화 또는 이메일(E-mail)로 열람이나 정정을 요청하시면 곧바로 조치하겠습니다.
+              ② 고객께서 개인정보의 오류에 대해 정정을 요청하면, 사이트는 정정을 완료하기 전까지 해당 개인 정보를 이용하거나 제공하지 않습니다.
+              ③ 잘못된 개인정보를 제3자에게 이미 제공했을 때에는 정정 처리결과를 제3자에게 곧바로 통지하여 정정하도록 조치하겠습니다.
+              
+              제8조 개인정보의 수집,이용,제공에 대한 동의철회
+              
+              ① 회원가입 등을 통한 개인정보의 수집, 이용, 제공과 관련해 귀하는 동의하신 내용을 언제든지 철회 하실 수 있습니다. 동의철회는 홈페이지 첫 화면의 『회원정보』에서 "회원탈퇴"를 클릭하면 개인정보의 수집ㆍ이용ㆍ제공에 대한 동의를 바로 철회할 수 있으며, 개인정보보호책임자에게 서면, 전화, 이메일(E-mail) 등으로 연락하시면 사이트는 즉시 회원 탈퇴를 위해 필요한 조치를 취합니다. 동의를 철회하고 개인정보를 파기하는 등의 조치가 있으면 그 사실을 귀하께 지체없이 통지하도록 하겠습니다.
+              ② 사이트는 개인정보의 수집에 대한 동의철회(회원탈퇴)를 개인정보를 수집하는 방법보다 쉽게 할 수 있도록 필요한 조치를 취합니다.
+              
+              제9조 개인정보의 안전성 확보 조치
+              
+              사이트는 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.
+              
+              1. 개인정보의 암호화
+              이용자의 개인정보는 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화 하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다.
+              
+              2. 해킹 등에 대비한 기술적 대책
+              사이트는 해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.
+              
+              제10조 14세 미만 아동의 개인정보보호
+              
+              사이트는 온라인 환경에서 어린이의 개인정보를 보호하는 것 역시 중요한 일이라고 생각하고 있으며, 사이트는 법정대리인의 동의가 필요한 만 14세 미만 아동의 회원가입은 받고 있지 않습니다. 명의도용이나 시스템 악용 등으로 만 14세 미만의 아동이 사이트에 가입하거나 개인정보를 제공하게 될 경우 법정대리인이 모든 권리를 행사할 수 있습니다.
+              
+              제11조 개인정보보호 책임자
+              
+              사이트의 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 이용자의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+              
+              ▶ 개인정보 보호책임자
+              - 성명 : *수정필요*
+              - 직책 : *수정필요*
+              - 직급 : *수정필요*
+              - 연락처 : *수정필요*
+              
+              개인정보침해에 대한 신고 또는 상담이 필요하신 경우에는 한국정보보호진흥원(KISA) 개인정보침해신고센터로 문의하시기 바랍니다. 또한, 귀하가 개인정보침해를 통한 금전적, 정신적 피해를 입으신 경우에는 한국정보보호진흥원*KISA) 개인정보분쟁조정위원회에 피해구제를 신청하실 수 있습니다.
+              
+              - KISA 개인정보보호 (http://privacy.kisa.or.kr / (국번 없이) 118)
+              - 경찰청 사이버안전국 (http://cyberbureau.police.go.kr (국번없이) 182)
+              - 대검찰청 사이버수사과 (http://spo.go.kr / 02-3480-3570)
+              - 개인정보 침해신고센터 (한국인터넷 진흥원 운영) ( http://privacy.kisa.or.kr / (국번없이) 118)
+              - 개인정보 분쟁조정위원회 (한국인터넷 진흥원 운영) (http://www.kopico.go.kr / 1833-6972)
+              
+              제12조 개인정보 처리방침 변경
+              
+              이 개인정보처리방침은 시행일(OOOO년 OO월 OO일)로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.  
+            </div>
+            <br>
+          </div>
+          <div style="margin-top: 2rem;">
+          <input type="checkbox" id="{{ field.id_for_label }}" name="{{ field.name }}">
+          <span style="font-size: 1.8rem;padding: 0 0 0 6px;">개인정보 수집 및 이용에 동의합니다.<span style="color: red;">*</span>
+          <span id="agree_content" style="text-decoration: underline;cursor: pointer;font-size: 1.5rem">[약관]</span></span>
+          </div>
+            {% endif %}  
+            
+        {% endfor %}  
+
+<br>
+<br>
+    <input type="submit" value="신청하기" class="btn">
+
+  </form>
+</section>
+
+
+        <!-- start footer -->
+        <footer class="bg-charcoal-blue pb-4 sm-pb-50px" style="background-image: url(images/demo-branding-agency-pattern.svg)">
+            <div class="container">
+                <div class="row mb-6">
+                    <div class="col-lg-12 col-md-12 sm-mb-30px order-2 order-md-1">
+                        <h3 class="text-white text-center fw-500 alt-font mb-50px ls-minus-1px sm-mb-30px">가위달인</h3>
+                    <!-- <div class="col-lg-12 col-md-12 sm-mb-30px order-2 order-md-1"> -->
+                    
+                        <div class="row">
+                            <div class="col-lg-4 col-4 text-center ">
+                                <span class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24">상호</span>
+                                <a class="" href="tel:12345678910">가위달인</a>
+                            </div>
+                            <div class="col-lg-4 col-4 text-center">
+                                <span class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24">대표자</span>
+                                <a href="mailto:info@domain.com">이수용</a>
+                            </div>
+                            <div class="col-lg-4 col-4 text-center ">
+                                <span class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24">사업자번호</span>
+                                <a class="" href="tel:12345678910">519-37-00591</a>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-4 text-center ">
+                                <span class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24">주소</span>
+                                <a class="" href="tel:12345678910">인천광역시 서구 OOO OOOO</a>
+                            </div>
+                            <div class="col-lg-4 col-4 text-center">
+                                <span class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24" >연락처</span>
+                                <a href="mailto:info@domain.com">519-37-00591</a>
+                            </div>
+                            <div class="col-lg-4 col-4 text-center " style="padding: 0 !important;">
+                                <span class="alt-font fs-14 d-block text-white ls-1px lh-24" >이메일</span>
+                                <a href="mailto:info@domain.com">infodesk@naver.com</a>
+                            </div>
+                        </div>
+                        
+                    <!-- </div> -->
+                    
+                    <!-- <div class="col-md-2 offset-lg-1 col-6 order-3 order-md-2">
+                        <span class="alt-font fs-14 text-uppercase mb-5px d-block text-white ls-1px">Company</span>
+                        <ul>
+                            <li><a href="demo-branding-agency.html">Home</a></li>
+                            <li><a href="demo-branding-agency-about.html">Agency</a></li>
+                            <li><a href="demo-branding-agency-services.html">Services</a></li>
+                            <li><a href="demo-branding-agency-portfolio.html">Portfolio</a></li>
+                            <li><a href="demo-branding-agency-contact.html">Contact</a></li>
+                        </ul>
+                    </div> -->
+                    <!-- <div class="col-md-2 col-6 order-3 order-md-3">
+                        <span class="alt-font fs-14 text-uppercase mb-5px d-block text-white ls-1px">Follow Us</span>
+                        <ul>
+                            <li><a href="https://www.pinterest.com/" target="_blank">Pinterest</a></li>
+                            <li><a href="http://www.twitter.com" target="_blank">Twitter</a></li>
+                            <li><a href="http://www.dribbble.com" target="_blank">Dribbble</a></li> 
+                            <li><a href="http://www.instagram.com" target="_blank">Instagram</a></li>
+                            <li><a href="http://www.behance.com" target="_blank">Behance</a></li>
+                        </ul>
+                    </div> -->
+                    <!-- <div class="col-md-2 order-1 order-md-4 sm-mb-30px">
+                        <a href="demo-branding-agency.html" class="footer-logo"><img src="images/scissorswhite.png" data-at2x="images/demo-branding-agency-white-logo@2x.png" alt=""></a>
+                    </div> -->
+                </div>
+                <!-- <div class="row">
+                    <div class="col-md-7 last-paragraph-no-margin">
+                        <p class="fs-13 lh-22 w-95 sm-w-100">This site is protected by reCAPTCHA and the Google privacy policy and terms of service apply. You must not use this website if you disagree with any of these website standard terms and conditions.</p>
+                    </div>
+                    <div class="col-md-5 text-md-end sm-mt-15px last-paragraph-no-margin">
+                        <p class="fs-13 lh-22">&copy; 2024 Crafto is Powered by <a href="https://www.themezaa.com/" target="_blank" class="text-decoration-line-bottom text-white">ThemeZaa</a></p>
+                    </div>
+                </div> -->
+            </div>
+        </footer>
+        <!-- end footer -->
+        <!-- end footer -->
+         <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+          <a href="#" class="scroll-top" aria-label="scroll">
+            <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+          </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/vendors.min.js' %}"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA56KqSJ11nQUw_tXgXyNMiPmQeM7EaSA&callback=initMap"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        <script>
   
 
-hi  
-</body>
+// 개인정보관련js   
+var myagree = document.getElementById("agree");
+var mybutton = document.getElementById("submit");
+
+function myFunction() {
+
+    var elmnt = document.getElementById("myDIV");
+    var x = elmnt.scrollLeft;
+    var y = elmnt.scrollTop;
+    document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y + "px";
+    
+    console.log(y);
+    
+    if (y == 567) {
+        
+        myagree.disabled = "";
+        mybutton.disabled = "";
+    }
+    
+}
+
+</script>
+<script>
+        const agreeContent = document.querySelector('#agree_content');
+        const myDiv = document.querySelector('#myDIV');
+
+        agreeContent.addEventListener('click', function() {
+            myDiv.classList.toggle('agree_active');
+        });
+    </script>
+    </body>
 </html>
