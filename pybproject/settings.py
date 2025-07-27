@@ -44,7 +44,7 @@ SECRET_KEY = get_secret("SECRET_KEY")
 DEBUG = True 
 
 
-ALLOWED_HOSTS =['211.45.162.31', '가위달인.kr', '127.0.0.1']
+ALLOWED_HOSTS =['211.45.162.31', 'xn--o39a84k50skna.kr','가위달인.kr', '127.0.0.1']
 
 
 # Application definition
