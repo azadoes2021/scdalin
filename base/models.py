@@ -69,7 +69,7 @@ class Collectingdb(models.Model):
     # dbname = models.CharField(max_length=20, default='', verbose_name='dbname')
     # dbnamekr = models.CharField(max_length=20, default='', verbose_name='DB종류')
     # address001 = models.CharField(max_length=10, choices=ADDRESS001_CHOICES, null=True, verbose_name='지역')
-    address001 = models.CharField(max_length=100 ,null=True, verbose_name='주소')        
+    address001 = models.CharField(max_length=120 ,null=True, verbose_name='주소')        
     # address002 = models.CharField(max_length=50 ,null=True, verbose_name='주소2')        
     # 추천인정보
     # promoperson = models.CharField(max_length=50 ,null=True, verbose_name='추천인')        
