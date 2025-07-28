@@ -111,7 +111,7 @@ a {
   display: block;
 }
 .contact {
-    min-height: 96rem;
+    min-height: 100rem;
   }
 
   @media (max-width:500px) {
@@ -177,7 +177,7 @@ a {
 <!-- <br> -->
 <!-- <a href=""><img class="rbbtn" src="{% static 'images/kakaotalks02.png' %}" alt=""></a> -->
 <br>
-<a href="tel:12345678910"><img class="rbbtn" src="{% static 'images/phone02.png' %}" alt=""></a>
+<a href="tel:0262192600"></a><img class="rbbtn" src="{% static 'images/phone02.png' %}" alt=""></a>
 <br>
 <a href="#top"><img class="rbbtn" src="{% static 'images/top.png' %}" alt=""></a>
 </div> 
@@ -190,12 +190,12 @@ a {
         <strong style="color: blue;"> 
             <p>신청이 완료되지 않았습니다.</p>
             <!-- <p>***필수사항을 모두 입력하세요***</p> -->
-            <p> 미용실명, 성함/상호, 전화번호, 지역란을</p>
+            <p> 미용실명, 성함, 전화번호, 주소란을</p>
             <p> 다시 한번 체크해주세요!!</p>
         </strong>
         </div>
         <br class="">
-        <br class="">
+        
 									
 									
 							
@@ -574,7 +574,7 @@ a {
                             </div>
                         </div>
                         <span class="d-inline-block fs-19 text-dark-gray mb-5px fw-600 ls-minus-05px">2. 정밀 진단</span>
-                        <p class="w-85 lg-w-95 mx-auto">입고된 가위의 상태를 마이크로스코프로 <br> 정밀 진단합니다.</p>
+                        <p class="w-85 lg-w-95 mx-auto">입고된 가위의 상태를 마이크로스코프 <br> 를 사용해 정밀 진단합니다.</p>
                     </div>
                     <!-- end process step item -->                    
                     <!-- start process step item -->
@@ -656,7 +656,7 @@ a {
         <strong style="color: blue;"> 
             <p>신청이 완료되지 않았습니다.</p>
             <!-- <p>***필수사항을 모두 입력하세요***</p> -->
-            <p> 미용실명, 성함/상호, 전화번호, 지역란을</p>
+            <p> 미용실명, 성함, 전화번호, 주소란을</p>
             <p> 다시 한번 체크해주세요!!</p>
         </strong>
         </div>
@@ -693,8 +693,9 @@ a {
             </div>
             {% elif field.name == 'address001' %}
             <div class="inputBox">
-            <label for="{{ field.id_for_label }}" class="">지역선택<span style="color: red;">*</span></label>
-            <select name="{{ field.name }}" class="" id="{{ field.id_for_label }}">
+            <label for="{{ field.id_for_label }}" class="">주소<span style="color: red;">*</span></label>
+            <input name="{{ field.name }}" type="text" placeholder="주소" id="{{ field.id_for_label }}">
+            <!-- <select name="{{ field.name }}" class="" id="{{ field.id_for_label }}">
                 <option value="">- 지역선택 -</option>
                 <option value="서울(서울이남)">서울(서울이남)</option>              
                 <option value="서울(서울이북)">서울(서울이북)</option>              
@@ -715,8 +716,8 @@ a {
                 <option value="광주광역시">광주광역시</option>
                 <option value="전라북도">전라북도</option>
                 <option value="제주시">제주시</option>
-            </select> 
-            <!-- </div>             -->
+            </select>  -->
+            </div>            
             
             {% elif field.name == 'promoperson' %}  
             <!-- <div class="inputBox"> -->
@@ -889,7 +890,7 @@ a {
         {% endfor %}  
 
 <br>
-<br>
+
     <input type="submit" value="신청하기" class="btn">
 
   </form>
@@ -920,13 +921,17 @@ a {
                                 <span class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24">사업자번호</span>
                                 <a class="" href="">519-37-00591</a>
                             </div>
-                            <div class="col-lg-6 col-6 text-center ">
+                            <div class="col-lg-6 col-6 text-center">
+                                <span class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24" >연락처</span>
+                                <a href="tel:0262192600">02-6219-2600</a>
+                            </div>
+                            <!-- <div class="col-lg-6 col-6 text-center ">
                                 <span class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24">주소</span>
                                 <a class="" href="">인천광역시 서구 OOO OOOO OO O층</a>
-                            </div>
+                            </div> -->
                         </div>
-                        <br>
-                        <div class="row">                            
+                        <!-- <br> -->
+                        <!-- <div class="row">                            
                             <div class="col-lg-6 col-6 text-center">
                                 <span class="alt-font fs-14 text-uppercase d-block text-white ls-1px lh-24" >연락처</span>
                                 <a href="tel:12345678910">031-2100-3400</a>
@@ -935,7 +940,7 @@ a {
                                 <span class="alt-font fs-14 d-block text-white ls-1px lh-24" >이메일</span>
                                 <a href="mailto:info@domain.com">infodesk@naver.com</a>
                             </div>
-                        </div>
+                        </div> -->
 
                         
                     <!-- </div> -->

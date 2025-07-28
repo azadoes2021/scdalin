@@ -30,7 +30,7 @@ class CollectingdbForm(forms.Form):
         error_messages={
             'required': '이름 또는 상호를 입력해주세요.'
         },
-        max_length=64, label='이름(상호)'
+        max_length=100, label='이름(상호)'
     )
     # address002 = forms.CharField(
     #     error_messages={
@@ -38,9 +38,9 @@ class CollectingdbForm(forms.Form):
     #     },
     #     max_length=64, label='이름(상호)'
     # )
-    promoperson = forms.CharField(        
-        required=False, max_length=64, label='추천인(지인소개할인)'
-    )
+    # promoperson = forms.CharField(        
+    #     required=False, max_length=64, label='추천인(지인소개할인)'
+    # )
 
     # dbcode = forms.CharField(
     #     error_messages={
@@ -103,7 +103,7 @@ class CollectingdbForm(forms.Form):
         # address002 = cleaned_data.get('address002')        
 
         # name = cleaned_data.get('name')        
-        promoperson = cleaned_data.get('promoperson')
+        # promoperson = cleaned_data.get('promoperson')
 
         # subject = cleaned_data.get('subject')
 
@@ -129,7 +129,7 @@ class CollectingdbForm(forms.Form):
                 number = number,
                 address001 = address001,
                 # address002 = address002,
-                promoperson = promoperson,
+                # promoperson = promoperson,
                 # subject = subject,
                 # subject02 = subject02,
                 # body = body,
