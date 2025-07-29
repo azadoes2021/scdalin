@@ -40,8 +40,8 @@ SECRET_KEY = get_secret("SECRET_KEY")
 # SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True 
+DEBUG = False
+# DEBUG = True 
 
 
 ALLOWED_HOSTS =['211.45.162.31', 'xn--o39a84k50skna.kr','가위달인.kr', '127.0.0.1']
